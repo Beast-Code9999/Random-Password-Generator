@@ -12,6 +12,7 @@ header {
     width: 100%;
     height: 10vh;
     font-size: 2rem;
+    background-color: aqua;
 }
 
 section.main-body {
@@ -20,6 +21,7 @@ section.main-body {
     align-items: center;
     width: 100%;
     height: 80vh;
+    background-color: aquamarine;
 }
 
 div.container {
@@ -80,11 +82,13 @@ div.container {
 /* pre-built footer by beast code */
 
 footer {
-    padding: 36px;
     text-align: center;
     font-size: 25px;
     width: 100%;
     height: 10vh;
+    background-color: aqua;
+    padding: 36px;
+    box-sizing: border-box;
 }
 
 footer a {
