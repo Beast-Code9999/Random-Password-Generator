@@ -42,6 +42,30 @@ div.container {
     width: 25rem;
     height: 20rem;
     background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.result {
+    width: 10rem;
+    height: 10rem;
+    background-color:bisque;
+}
+
+.choiceContainer {
+    width: 12rem;
+    height: 18rem;
+    background-color:rgb(253, 219, 144)
+}
+
+.passwordLength {
+    width: 12rem;
+    height: 2rem;
+    background-color: white;
 }
 
 footer {
