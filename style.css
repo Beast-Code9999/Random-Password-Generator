@@ -64,9 +64,20 @@ div.container {
 
 .passwordLength {
     width: 12rem;
-    height: 2rem;
+    height: 3rem;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.passwordLength > input {
+    width: 11rem;
+}
+
+
+
+/* pre-built footer by beast code */
 
 footer {
     padding: 36px;
