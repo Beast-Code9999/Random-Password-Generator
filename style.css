@@ -32,7 +32,17 @@ div.container {
     align-items: center;
 }
 
+.display {
+    width: 25rem;
+    height: 5rem;
+    background-color: aquamarine;
+}
 
+.result-and-choice {
+    width: 25rem;
+    height: 20rem;
+    background-color: beige;
+}
 
 footer {
     padding: 36px;
