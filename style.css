@@ -59,6 +59,9 @@ div.container {
     width: 10rem;
     height: 10rem;
     background-color:bisque;
+    box-sizing: border-box;
+    padding: 1rem;
+    word-wrap: break-word;
 }
 
 .choiceContainer {
