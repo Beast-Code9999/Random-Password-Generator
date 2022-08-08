@@ -96,7 +96,7 @@ div.container {
     overflow-y: scroll;
 }
 
-.choiceContainer {
+.inputContainer {
     width: 12rem;
     height: 18rem;
     background-color:rgb(253, 219, 144)
@@ -115,6 +115,19 @@ div.container {
     width: 11rem;
 }
 
+.choicesContainer {
+    padding: 1rem;
+}
+
+.choicesContainer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+}
 
 
 /* pre-built footer by beast code */
