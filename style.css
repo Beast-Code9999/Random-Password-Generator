@@ -51,9 +51,39 @@ div.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.1rem;
     padding: 1rem;
     box-sizing: border-box;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.generate {
+    width: 5rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+}
+
+.copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    padding: .3rem;
 }
 
 .result {
