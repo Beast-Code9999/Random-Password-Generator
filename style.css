@@ -63,6 +63,7 @@ div.container {
     box-sizing: border-box;
     padding: 1rem;
     word-wrap: break-word;
+    overflow-y: scroll;
 }
 
 .choiceContainer {
