@@ -3,12 +3,16 @@ const result = document.querySelector('.result');
 const passwordLength = document.querySelector('.passwordLength > input');
 const choices = Array.from(document.querySelectorAll('.choice > input'));
 
-let uppercaseChecked = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let lowercaseChecked = "abscefghijklmnopqrstuvwxyz";
-let numbersChecked = "1234567890"
-let symbolsChecked = ""
+let uppercaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let lowercaseString = "abscefghijklmnopqrstuvwxyz";
+let numbersString = "1234567890"
+let symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
+// console.log(symbolsString[Math.floor(Math.random() * symbolsString.length)])
 
-console.log(uppercaseChecked);
+let uppercaseChecked = false;
+let lowercaseChecked = false;
+let numbersChecked = false;
+let symbolsChecked = false;
 
 choices.forEach(choice => {
     console.log(choice.checked)
