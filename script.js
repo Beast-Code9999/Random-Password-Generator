@@ -28,8 +28,11 @@ window.addEventListener('click', function(event) {
         result.textContent = "hello there"
     }
 
-    if(event.target.id === "copy") this.navigator.clipboard.writeText(result.textContent)
-
+    if(event.target.id === "copy") {
+        this.navigator.clipboard.writeText(result.textContent)
+        this.alert("Text copied")
+    }
+    
 
 })
 
