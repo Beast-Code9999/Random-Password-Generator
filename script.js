@@ -2,7 +2,7 @@ const display = document.querySelector('.display');
 const result = document.querySelector('.result');
 const passwordLength = document.querySelector('.passwordLength > input');
 const choices = Array.from(document.querySelectorAll('.choice > input'));
-
+const generate = document.querySelector('.generate');
 
 let uppercaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let lowercaseString = "abscefghijklmnopqrstuvwxyz";
@@ -10,24 +10,37 @@ let numbersString = "1234567890"
 let symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
 // console.log(symbolsString[Math.floor(Math.random() * symbolsString.length)])
 
-let uppercaseChecked = false;
+let uppercaseChecked = true;
 let lowercaseChecked = false;
 let numbersChecked = false;
 let symbolsChecked = false;
 
-let ambitions = choices.forEach(choice => {
-    choice.addEventListener('click', () => {
-        checkChoices(choice.id, choice.checked)
+window.addEventListener('click', function(event) {
+    choices.forEach(choice => {
+            checkChoices(choice.id, choice.checked)
+        })
         console.log(uppercaseChecked)
         console.log(lowercaseChecked)
         console.log(numbersChecked)
         console.log(symbolsChecked)
-    })
+        console.log(event.target)
+    if(event.target.id === "generate") {
+        result.textContent = "hello there"
+    }
+
+    if(event.target.id === "copy") this.navigator.clipboard.writeText(result.textContent)
+
+
 })
 
 
 
-console.log(uppercaseChecked)
+passwordLength.addEventListener('change', function() {
+
+})
+
+
+
 
 function checkChoices(id, check) {
     if(id === "uppercase" && check === true) {

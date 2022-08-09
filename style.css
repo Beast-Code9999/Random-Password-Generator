@@ -78,12 +78,20 @@ div.container {
     padding: .3rem;
 }
 
+.generate:hover {
+    cursor: pointer;
+}
+
 .copy {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: aqua;
     padding: .3rem;
+}
+
+.copy:hover {
+    cursor: pointer;
 }
 
 .result {
@@ -129,6 +137,10 @@ div.container {
     font-size: 1.1rem;
 }
 
+input:hover {
+    cursor: pointer;
+}
+
 
 /* pre-built footer by beast code */
 
@@ -158,3 +170,4 @@ footer img:hover {
     transition: all 0.5s ease-in-out;
     transform: rotate(360deg) scale(1.5);
 }
+
