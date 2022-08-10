@@ -19,11 +19,10 @@ window.addEventListener('click', function(event) {
     choices.forEach(choice => {
             checkChoices(choice.id, choice.checked)
         })
-        console.log(uppercaseChecked)
-        console.log(lowercaseChecked)
-        console.log(numbersChecked)
-        console.log(symbolsChecked)
+        
+        toConsole()
         console.log(event.target)
+
     if(event.target.id === "generate") {
         result.textContent = "hello there"
     }
@@ -36,7 +35,12 @@ window.addEventListener('click', function(event) {
 
 })
 
-
+function toConsole() {
+    console.log(uppercaseChecked)
+    console.log(lowercaseChecked)
+    console.log(numbersChecked)
+    console.log(symbolsChecked)
+}
 
 passwordLength.addEventListener('change', function() {
 
