@@ -43,24 +43,24 @@ function toConsole() {
     console.log(symbolsChecked)
 }
 
-function generatePassword(length) {
+function generatePassword(length, check) {
     let password = ''
     for(let i = 1; i <= length; i++) {
         let random = Math.floor(Math.random() * 4 + 1);
-        if(random === 1) {
+        if(random === 1 && uppercaseChecked === true) {
             password += uppercaseString[Math.floor(Math.random() * uppercaseString.length)];
         }
-        if(random === 2) {
+        if(random === 2 && lowercaseChecked === true) {
             password += lowercaseString[Math.floor(Math.random() * lowercaseString.length)];
         }
-        if(random === 3) {
+        if(random === 3 && numbersChecked === true) {
             password += numbersString[Math.floor(Math.random() * numbersString.length)];
         }
-        if(random === 4) {
+        if(random === 4 && symbolsChecked === true) {
             password += symbolsString[Math.floor(Math.random() * symbolsString.length)];
         }
     }
-    console.log(password)
+    result.textContent = password;
 }
 
 console.log(generatePassword())
