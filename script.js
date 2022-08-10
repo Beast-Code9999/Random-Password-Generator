@@ -8,14 +8,6 @@ const uppercaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercaseString = "abscefghijklmnopqrstuvwxyz";
 const numbersString = "1234567890"
 const symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
-console.log(symbolsString[Math.floor(Math.random() * symbolsString.length)])
-
-const randomUppercaseString = uppercaseString[Math.floor(Math.random() * uppercaseString.length)]
-const randomLowercaseString = lowercaseString[Math.floor(Math.random() * lowercaseString.length)]
-const randomNumberString = numbersString[Math.floor(Math.random() * numbersString.length)]
-const randomSymbolString = symbolsString[Math.floor(Math.random() * symbolsString.length)]
-
-console.log(randomUppercaseString, randomLowercaseString, randomNumberString, randomSymbolString)
 
 let uppercaseChecked = true;
 let lowercaseChecked = false;
@@ -51,17 +43,24 @@ function toConsole() {
     console.log(symbolsChecked)
 }
 
-function chooseRandomChoices() {
-    return Math.floor(Math.random() * 4 + 1)
-}
-
 function generatePassword(length) {
     let password = ''
     for(let i = 1; i <= length; i++) {
-        if(chooseRandomChoices() === 1) {
-            
+        let random = Math.floor(Math.random() * 4 + 1);
+        if(random === 1) {
+            password += uppercaseString[Math.floor(Math.random() * uppercaseString.length)];
+        }
+        if(random === 2) {
+            password += lowercaseString[Math.floor(Math.random() * lowercaseString.length)];
+        }
+        if(random === 3) {
+            password += numbersString[Math.floor(Math.random() * numbersString.length)];
+        }
+        if(random === 4) {
+            password += symbolsString[Math.floor(Math.random() * symbolsString.length)];
         }
     }
+    console.log(password)
 }
 
 console.log(generatePassword())
