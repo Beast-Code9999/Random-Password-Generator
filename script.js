@@ -4,16 +4,24 @@ const passwordLength = document.querySelector('.passwordLength > input');
 const choices = Array.from(document.querySelectorAll('.choice > input'));
 const generate = document.querySelector('.generate');
 
-let uppercaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let lowercaseString = "abscefghijklmnopqrstuvwxyz";
-let numbersString = "1234567890"
-let symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
-// console.log(symbolsString[Math.floor(Math.random() * symbolsString.length)])
+const uppercaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowercaseString = "abscefghijklmnopqrstuvwxyz";
+const numbersString = "1234567890"
+const symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
+console.log(symbolsString[Math.floor(Math.random() * symbolsString.length)])
+
+const randomUppercaseString = uppercaseString[Math.floor(Math.random() * uppercaseString.length)]
+const randomLowercaseString = lowercaseString[Math.floor(Math.random() * lowercaseString.length)]
+const randomNumberString = numbersString[Math.floor(Math.random() * numbersString.length)]
+const randomSymbolString = symbolsString[Math.floor(Math.random() * symbolsString.length)]
+
+console.log(randomUppercaseString, randomLowercaseString, randomNumberString, randomSymbolString)
 
 let uppercaseChecked = true;
 let lowercaseChecked = false;
 let numbersChecked = false;
 let symbolsChecked = false;
+let currentPassLength = 8;
 
 window.addEventListener('click', function(event) {
     choices.forEach(choice => {
@@ -24,7 +32,8 @@ window.addEventListener('click', function(event) {
         console.log(event.target)
 
     if(event.target.id === "generate") {
-        result.textContent = "hello there"
+        console.log(currentPassLength)
+        generatePassword(currentPassLength)
     }
 
     if(event.target.id === "copy") {
@@ -49,7 +58,9 @@ function chooseRandomChoices() {
 function generatePassword(length) {
     let password = ''
     for(let i = 1; i <= length; i++) {
-
+        if(chooseRandomChoices() === 1) {
+            
+        }
     }
 }
 
