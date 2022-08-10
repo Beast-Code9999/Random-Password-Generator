@@ -42,8 +42,21 @@ function toConsole() {
     console.log(symbolsChecked)
 }
 
-passwordLength.addEventListener('change', function() {
+function chooseRandomChoices() {
+    return Math.floor(Math.random() * 4 + 1)
+}
 
+function generatePassword(length) {
+    let password = ''
+    for(let i = 1; i <= length; i++) {
+
+    }
+}
+
+console.log(generatePassword())
+
+passwordLength.addEventListener('change', function() {
+    console.log(this.value)
 })
 
 
