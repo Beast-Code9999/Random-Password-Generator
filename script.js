@@ -24,7 +24,6 @@ window.addEventListener('click', function(event) {
         this.navigator.clipboard.writeText(result.textContent)
         this.alert("Text copied")
     }
-    console.log(selectedChoices)
 })
 
 choices.forEach(choice => {
@@ -45,7 +44,6 @@ choices.forEach(choice => {
         }
         if(choice.id === `${choiceId}` && choice.checked === true) {
             selectedChoices.push(choiceString)
-            console.log(choiceString)
         }
         else if(choice.id === `${choiceId}` && choice.checked === false) {
             let myIndex = selectedChoices.indexOf(choiceString);
@@ -53,14 +51,12 @@ choices.forEach(choice => {
                 selectedChoices.splice(myIndex, 1);
             }
         }
-        console.log(selectedChoices)
     })
 })
 
 function generatePassword(length) {
     let password = ''
     let joinedPass = selectedChoices.join('')
-    console.log(joinedPass)
     if(selectedChoices.length === 0) result.textContent = "please select at least one option"
     if(selectedChoices.length !== 0) {
         for(let i = 1; i <= length; i++) {
