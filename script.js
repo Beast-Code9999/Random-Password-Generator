@@ -9,8 +9,6 @@ const lowercaseString = "abscefghijklmnopqrstuvwxyz";
 const numbersString = "1234567890"
 const symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
 
-// console.log(uppercaseString[Math.floor(Math.random() * uppercaseString.length)])
-
 let currentPassLength = 8;
 let selectedChoices = [uppercaseString];
 
