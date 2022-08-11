@@ -12,7 +12,7 @@ const symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
 // console.log(uppercaseString[Math.floor(Math.random() * uppercaseString.length)])
 
 let currentPassLength = 8;
-let selectedChoices = [];
+let selectedChoices = [uppercaseString];
 
 // to listen for generate and copy password
 // window.addEventListener('click', function(event) {
@@ -29,8 +29,30 @@ let selectedChoices = [];
 
 choices.forEach(choice => {
     choice.addEventListener('click', () => {
-        (choice.id === 'uppercase' && choice.checked === true) ? selectedChoices.push(uppercaseString) : console.log(selectedChoices[0])
-
+        let choiceId = choice.id;
+        let choiceString = undefined;
+        if(choice.id === 'uppercase') {
+            choiceString = uppercaseString
+        } 
+        else if(choice.id === 'lowercase') {
+            choiceString = lowercaseString
+        }
+        else if(choice.id === 'numbers') {
+            choiceString = numbersString
+        }
+        else if(choice.id === 'symbols') {
+            choiceString = symbolsString
+        }
+        if(choice.id === `${choiceId}` && choice.checked === true) {
+            selectedChoices.push(choiceString)
+            console.log(choiceString)
+        }
+        else if(choice.id === `${choiceId}` && choice.checked === false) {
+            let myIndex = selectedChoices.indexOf(choiceString);
+            if (myIndex !== -1) {
+                selectedChoices.splice(myIndex, 1);
+            }
+        }
         console.log(selectedChoices)
     })
 })
