@@ -9,20 +9,24 @@ const lowercaseString = "abscefghijklmnopqrstuvwxyz";
 const numbersString = "1234567890"
 const symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
 
+// console.log(uppercaseString[Math.floor(Math.random() * uppercaseString.length)])
+
 let uppercaseChecked = true;
 let lowercaseChecked = false;
 let numbersChecked = false;
 let symbolsChecked = false;
 let currentPassLength = 8;
+let selectedChoices = [uppercaseString];
+console.log(selectedChoices)
 
 window.addEventListener('click', function(event) {
-    choices.forEach(choice => {
-            checkChoices(choice.id, choice.checked)
+    choices.forEach(function(choice) {
+        choice.addEventListener('click', function() {
+            checkChoices(choice.id, choice.checked) 
         })
+    })
         
-        toConsole()
-        console.log(event.target)
-
+        console.log(selectedChoices)
     if(event.target.id === "generate") {
         console.log(currentPassLength)
         generatePassword(currentPassLength)
@@ -33,7 +37,6 @@ window.addEventListener('click', function(event) {
         this.alert("Text copied")
     }
     
-
 })
 
 function toConsole() {
@@ -63,7 +66,6 @@ function generatePassword(length, check) {
     result.textContent = password;
 }
 
-console.log(generatePassword())
 
 passwordLength.addEventListener('change', function() {
     console.log(this.value)
@@ -75,9 +77,11 @@ passwordLength.addEventListener('change', function() {
 function checkChoices(id, check) {
     if(id === "uppercase" && check === true) {
         uppercaseChecked = true;
+        selectedChoices.push(uppercaseString)
     } 
     else if(id === "uppercase" && check === false) {
         uppercaseChecked = false;
+        
     }
     if(id === "lowercase" && check === true) {
         lowercaseChecked = true;
@@ -96,5 +100,7 @@ function checkChoices(id, check) {
     } 
     else if(id === "symbols" && check === false) {
         symbolsChecked = false;
+
     }
+
 }
