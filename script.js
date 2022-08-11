@@ -16,8 +16,7 @@ let lowercaseChecked = false;
 let numbersChecked = false;
 let symbolsChecked = false;
 let currentPassLength = 8;
-let selectedChoices = [uppercaseString];
-console.log(selectedChoices)
+
 
 window.addEventListener('click', function(event) {
     choices.forEach(function(choice) {
@@ -25,7 +24,7 @@ window.addEventListener('click', function(event) {
             checkChoices(choice.id, choice.checked) 
         })
     })
-        
+        toConsole()
         console.log(selectedChoices)
     if(event.target.id === "generate") {
         console.log(currentPassLength)
@@ -36,7 +35,6 @@ window.addEventListener('click', function(event) {
         this.navigator.clipboard.writeText(result.textContent)
         this.alert("Text copied")
     }
-    
 })
 
 function toConsole() {
@@ -77,7 +75,6 @@ passwordLength.addEventListener('change', function() {
 function checkChoices(id, check) {
     if(id === "uppercase" && check === true) {
         uppercaseChecked = true;
-        selectedChoices.push(uppercaseString)
     } 
     else if(id === "uppercase" && check === false) {
         uppercaseChecked = false;
