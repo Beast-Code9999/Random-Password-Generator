@@ -83,11 +83,9 @@ div.container {
     align-items: center;
     padding: .3rem;
     border: 1px solid #59fb66;
+    font-size: .8rem;
 }
 
-.generate:hover {
-    cursor: pointer;
-}
 
 .copy {
     display: flex;
@@ -97,10 +95,12 @@ div.container {
     padding: .3rem;
     color: #59fb66;
     border:1px solid #59fb66;
+    font-size: .8rem;
 }
 
-.copy:hover {
+.generate:hover, .copy:hover {
     cursor: pointer;
+    background-color: rgb(33, 33, 33);
 }
 
 .result {
