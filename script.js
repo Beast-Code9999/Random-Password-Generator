@@ -57,8 +57,6 @@ choices.forEach(choice => {
     })
 })
 
-
-
 function generatePassword(length) {
     let password = ''
     let joinedPass = selectedChoices.join('')
@@ -70,14 +68,14 @@ function generatePassword(length) {
         }
         result.textContent = password;
     }
-
 }
 
 passwordLength.addEventListener('change', function() {
-    console.log(this.value)
+    let value = this.value;
+    currentPassLength = value;
 })
 
-
-
-
-
+//prevent typing any characters into input field in order to avoid typing in !range
+passwordLength.addEventListener('keypress', e => {
+    e.preventDefault();
+    });
