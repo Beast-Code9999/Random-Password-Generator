@@ -9,7 +9,7 @@ const lowercaseString = "abscefghijklmnopqrstuvwxyz";
 const numbersString = "1234567890"
 const symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
 
-let currentPassLength = 8;
+let currentPassLength = 10;
 let selectedChoices = [uppercaseString];
 
 // to listen for generate and copy password
