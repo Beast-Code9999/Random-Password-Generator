@@ -7,6 +7,7 @@
     <title>Random Password Generator</title>
     <link rel="shortcut icon" href="./img/Final_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./toggleBtn.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -37,20 +38,20 @@
                     </div>
                     <div class="choicesContainer">
                         <div class="choice uppercase" for="uppercase">
+                            <input class="toggle" autocomplete="off" id="uppercase" name="uppercase" type="checkbox" checked>
                             <label for="uppercase">INCLUDE UPPERCASE</label>
-                            <input autocomplete="off" id="uppercase" name="uppercase" type="checkbox" checked>
                         </div>
                         <div class="choice lowercase">
+                            <input class="toggle" autocomplete="off" id="lowercase" name="lowercase" type="checkbox">
                             <label for="lowercase">INCLUDE LOWERCASE</label>
-                            <input autocomplete="off" id="lowercase" name="lowercase" type="checkbox">
                         </div>
                         <div class="choice numbers">
+                            <input class="toggle" autocomplete="off" id="numbers" name="numbers" type="checkbox">
                             <label for="numbers">INCLUDE NUMBERS</label>
-                            <input autocomplete="off" id="numbers" name="numbers" type="checkbox">
                         </div>
                         <div class="choice symbols">
+                            <input class="toggle" autocomplete="off" id="symbols" name="symbols" type="checkbox">
                             <label for="symbols">INCLUDE SYMBOLS</label>
-                            <input autocomplete="off" id="symbols" name="symbols" type="checkbox">
                         </div>
                     </div>
                 </div>

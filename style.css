@@ -247,10 +247,6 @@ input:hover {
     left: 1rem;
 }
 
-div#box {
-
-}
-
 div#box > span {
     color: #59fb66;
     position: absolute;
@@ -263,6 +259,11 @@ div#box > span {
     font-weight: 800;
 }
 
+.choice {
+    display: flex;
+    justify-content: space-between;
+
+}
 
 
 /* pre-built footer by beast code */
