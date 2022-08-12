@@ -120,7 +120,7 @@ div.container {
     width: 12rem;
     height: 18rem;
     background-color:black;
-    border: 1px solid #59fb66;
+    /* border: 1px solid #59fb66; */
 }
 
 .passwordLength {
@@ -130,13 +130,13 @@ div.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #59fb66;
+    /* border: 1px solid #59fb66; */
     box-sizing: border-box;
 }
 
-.passwordLength > input {
+/* .passwordLength > input {
     width: 11rem;
-}
+} */
 
 .choicesContainer {
     padding: 1rem;
@@ -156,6 +156,68 @@ div.container {
 input:hover {
     cursor: pointer;
 }
+
+
+/* input[type="number" edit to passLengthContainer div*/
+.passLengthContainer {
+    position: relative;
+    width: 5rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 2.5rem;
+    border: 2px solid #59fb66;
+    transition: 0.5s;
+}
+
+.passLengthContainer:hover {
+    width: 7rem;
+}
+
+.passLengthContainer > .next {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-top: 2px solid #59fb66;
+    border-left: 2px solid #59fb66;
+    z-index: 1;
+    transform: translateY(-50%) rotate(135deg);
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.passLengthContainer:hover > .next {
+    opacity: 1;
+    right: 1rem;
+}
+
+.passLengthContainer > .prev {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-top: 2px solid #59fb66;
+    border-left: 2px solid #59fb66;
+    z-index: 1;
+    transform: translateY(-50%) rotate(315deg);
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.passLengthContainer:hover > .prev {
+    opacity: 1;
+    left: 1rem;
+}
+
+
+
+
 
 
 /* pre-built footer by beast code */
