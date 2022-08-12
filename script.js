@@ -1,15 +1,21 @@
 const display = document.querySelector('.display');
 const result = document.querySelector('.result');
 const choices = Array.from(document.querySelectorAll('.choice > input'));
-const passwordLength = document.querySelector('.passwordLength > input');
+// const passwordLength = document.querySelector('.passwordLength > input');
 const generate = document.querySelector('.generate');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+const numberLength = document.querySelector('#box span')
+console.log(next, prev, numberLength)
 
+// the strings of each catergory, used through random indexing
 const uppercaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercaseString = "abscefghijklmnopqrstuvwxyz";
 const numbersString = "1234567890"
 const symbolsString = "\`~!@#$%^&*()_+-=[]{}\\|;:\'\",<.>/?";
 
-let currentPassLength = 100;
+// default input value
+let currentPassLength = 10;
 let selectedChoices = [uppercaseString];
 
 // to listen for generate and copy password
@@ -22,6 +28,7 @@ window.addEventListener('click', function(event) {
         this.navigator.clipboard.writeText(result.textContent)
         this.alert("Text copied")
     }
+    console.log(currentPassLength)
 })
 
 choices.forEach(choice => {
@@ -64,12 +71,23 @@ function generatePassword(length) {
     }
 }
 
-passwordLength.addEventListener('change', function() {
-    let value = this.value;
-    currentPassLength = value;
-})
+next.addEventListener('click', add)
+prev.addEventListener('click', subtract)
 
-//prevent typing any characters into input field in order to avoid typing in !range
-passwordLength.addEventListener('keypress', e => {
-    e.preventDefault();
-    });
+function add() { 
+    currentPassLength += 1
+    numberLength.textContent = currentPassLength
+    if(+numberLength.textContent > 100) {
+        numberLength.textContent = '8'
+        currentPassLength = 8
+    }
+}
+
+function subtract() {
+    currentPassLength -= 1
+    numberLength.textContent = currentPassLength
+    if(+numberLength.textContent < 8) {
+        numberLength.textContent = '100'
+        currentPassLength = 100
+    }
+}
