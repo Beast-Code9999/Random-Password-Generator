@@ -172,20 +172,9 @@ div.container {
     padding: 1rem;
 }
 
-.choicesContainer > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #59fb66;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    font-size: 1.1rem;
-}
-
 input:hover {
     cursor: pointer;
 }
-
 
 /* input[type="number" edit to passLengthContainer div*/
 .passLengthContainer {
@@ -262,7 +251,19 @@ div#box > span {
 .choice {
     display: flex;
     justify-content: space-between;
+}
 
+.choice > label {
+    text-align:center;
+}
+
+.choicesContainer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #59fb66;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 
