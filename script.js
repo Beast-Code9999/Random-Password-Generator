@@ -5,7 +5,6 @@ const generate = document.querySelector('.generate');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 const numberLength = document.querySelector('#box span')
-console.log(next, prev, numberLength)
 
 // the strings of each catergory, used through random indexing
 const uppercaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -27,7 +26,6 @@ window.addEventListener('click', function(event) {
         this.navigator.clipboard.writeText(result.textContent)
         this.alert("Text copied")
     }
-    console.log(currentPassLength)
 })
 
 choices.forEach(choice => {
