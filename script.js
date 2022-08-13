@@ -59,7 +59,7 @@ choices.forEach(choice => {
 function generatePassword(length) {
     let password = ''
     let joinedPass = selectedChoices.join('')
-    if(selectedChoices.length === 0) result.textContent = "PLEASE SELECT ATLEAST ONE OPTION"
+    if(selectedChoices.length === 0) result.textContent = "PLEASE SELECT AT LEAST ONE OPTION"
     if(selectedChoices.length !== 0) {
         for(let i = 1; i <= length; i++) {
         password += joinedPass[Math.floor(Math.random() * joinedPass.length)]
