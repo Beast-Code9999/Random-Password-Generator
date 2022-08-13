@@ -1,4 +1,3 @@
-const display = document.querySelector('.display');
 const result = document.querySelector('.result');
 const choices = Array.from(document.querySelectorAll('.choice > input'));
 // const passwordLength = document.querySelector('.passwordLength > input');
