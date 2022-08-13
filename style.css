@@ -44,7 +44,7 @@ div.container {
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    border: 1px solid #59fb66;
+    border: 3px solid #59fb66;
 }
 
 .display {
@@ -55,7 +55,7 @@ div.container {
     justify-content: center;
     align-items: center;
     color: #59fb66;
-    border: 1px solid ;
+    border: 3px solid #59fb66;
     box-sizing: border-box;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -70,7 +70,7 @@ div.container {
     align-items: center;
     gap: 1.1rem;
     padding: 1rem;
-    border: 1px solid #59fb66;
+    border: 3px solid #59fb66;
     box-sizing: border-box;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -96,8 +96,9 @@ div.container {
     justify-content: center;
     align-items: center;
     padding: .3rem;
-    border: 1px solid #59fb66;
+    border: 3px solid #59fb66;
     font-size: .8rem;
+    border-radius: 20px;
 }
 
 
@@ -108,8 +109,9 @@ div.container {
     background-color: rgb(0, 0, 0);
     padding: .3rem;
     color: #59fb66;
-    border:1px solid #59fb66;
+    border:3px solid #59fb66;
     font-size: .8rem;
+    border-radius: 20px;
 }
 
 .generate:hover, .copy:hover {
@@ -127,7 +129,8 @@ div.container {
     word-wrap: break-word;
     overflow-y: scroll;
     text-align: center;
-    border: 1px solid #59fb66;
+    border: 3px solid #59fb66;
+    border-radius: 20px;
 }
 
 /* start of customization on scroll bar overflow-y */
@@ -187,8 +190,9 @@ input:hover {
     height: 3rem;
     background-color: rgb(0, 0, 0);
     border-radius: 2.5rem;
-    border: 2px solid #59fb66;
+    border: 3px solid #59fb66;
     transition: 0.5s;
+    margin-top: 1rem;
 }
 
 .passLengthContainer:hover {
@@ -202,8 +206,8 @@ input:hover {
     display: block;
     width: 0.8rem;
     height: 0.8rem;
-    border-top: 2px solid #59fb66;
-    border-left: 2px solid #59fb66;
+    border-top: 3px solid #59fb66;
+    border-left: 3px solid #59fb66;
     z-index: 1;
     transform: translateY(-50%) rotate(135deg);
     cursor: pointer;
@@ -226,8 +230,8 @@ input:hover {
     display: block;
     width: 0.8rem;
     height: 0.8rem;
-    border-top: 2px solid #59fb66;
-    border-left: 2px solid #59fb66;
+    border-top: 3px solid #59fb66;
+    border-left: 3px solid #59fb66;
     z-index: 1;
     transform: translateY(-50%) rotate(315deg);
     cursor: pointer;
