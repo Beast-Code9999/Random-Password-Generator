@@ -28,3 +28,4 @@ function complete() {
     clearInterval(timer);
     timer = null;
 }
+
