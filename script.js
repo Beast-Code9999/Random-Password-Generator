@@ -23,8 +23,10 @@ window.addEventListener('click', function(event) {
     }
 
     if(event.target.id === "copy") {
-        this.navigator.clipboard.writeText(result.textContent)
-        this.alert("Text copied")
+        this.navigator.clipboard.writeText(result.textContent).then(function() {
+            alert("Text copied");
+        })
+        
     }
 })
 
